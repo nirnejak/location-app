@@ -1,0 +1,4 @@
+export const AUTHENTICATE_USER = "AUTHENTICATE_USER";
+export const SET_RESPONSE = "SET_RESPONSE";
+export const CLEAR_RESPONSE = "CLEAR_RESPONSE";
+export const LOADING = "LOADING";

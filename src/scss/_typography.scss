@@ -1,0 +1,15 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+}
+
+// Align
+$aligns: (left, right, center, justify);
+@each $align in $aligns {
+    .text-#{$align} {
+        text-align: #{$align};
+    }
+}
+
+.justify-inter-word {
+    text-justify: inter-word;
+}
