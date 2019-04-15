@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { logoutUser } from "../../store/actions/index";
 
-class MapContainer extends Component {
+class MapPage extends Component {
   logoutHandler = () => {
     this.props.logoutUser();
   };
@@ -27,7 +27,7 @@ class MapContainer extends Component {
   }
 }
 
-MapContainer.propTypes = {
+MapPage.propTypes = {
   auth: PropTypes.object.isRequired,
   logoutUser: PropTypes.func.isRequired
 };
@@ -47,4 +47,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(MapContainer);
+)(MapPage);

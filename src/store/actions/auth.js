@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+
 import { AUTHENTICATE_USER } from "../actions/actionTypes";
 import axios, { setAuthToken } from "../../configAxios";
 import { setLoading } from "./index";
@@ -30,27 +31,6 @@ export const loginUser = userData => {
       .catch(err => {
         toast.error("Something went wrong");
         dispatch(setLoading(false));
-      });
-  };
-};
-
-export const resetPassword = userData => {
-  return dispatch => {
-    dispatch(setLoading(true));
-    axios
-      .post("/passwords", userData)
-      .then(res => {
-        dispatch(setLoading(false));
-        if (res["data"]["json"]["success"]) {
-          window.location.href = "/";
-          toast.success("Your password has been reset successfully");
-        } else {
-          toast.error("User not found");
-        }
-      })
-      .catch(err => {
-        dispatch(setLoading(false));
-        toast.error("Something went wrong");
       });
   };
 };

@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import PrivateRoute from "./components/common/PrivateRoute";
 
 import Login from './components/pages/Login';
-import MapContainer from './components/pages/MapContainer';
+import MapPage from './components/pages/MapPage';
 
 import './App.scss';
 
@@ -17,7 +17,7 @@ class App extends Component {
         <ToastContainer />
         <Switch>
           <Route exact path="/" component={Login} />
-          <PrivateRoute exact path="/map" component={MapContainer} />
+          <PrivateRoute exact path="/map" component={MapPage} />
         </Switch>
       </div>
     );

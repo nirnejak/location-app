@@ -49,7 +49,7 @@ class Login extends Component {
     return (
       <div className="container">
         <div className="row d-flex justify-content-center" style={{ height: '100vh', alignItems: 'center' }}>
-          <div className="column column-50 column-offset-50">
+          <div className="column-50">
             <AuthContainer>
               <form onSubmit={this.submitHandler} className="mt-4">
                 <div className="p-20">
@@ -67,8 +67,8 @@ class Login extends Component {
                     value={this.state.formData.password}
                     onChange={event => this.inputChangedHandler(event)}
                   />
-                  <button className="button" type="submit">Login</button>
                 </div>
+                <button className="button" type="submit">Login</button>
               </form>
             </AuthContainer>
           </div>
