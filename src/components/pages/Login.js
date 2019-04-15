@@ -37,7 +37,6 @@ class Login extends Component {
     event.preventDefault();
 
     const userData = {
-      grant_type: "password",
       username: this.state.formData.username,
       password: this.state.formData.password
     };
